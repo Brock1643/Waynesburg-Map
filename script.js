@@ -124,7 +124,7 @@ const buhl = new google.maps.Marker({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const buhlInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "Buhl Hall is the home of many of the communication, criminal justice, english, and human studies. The University's TV station, radio station, and newspaper are located in Buhl.",
   });
       buhl.addListener("click", () => {
     buhlInfoWindow.open({
@@ -524,15 +524,31 @@ const cafePolygon = new google.maps.Polygon({
         fillOpacity: 1.0,
         });
     fieldhousepolygon.setMap(map);
+    const pollockCoords = [
+    { lat: 39.89932966350404, lng: -80.18516459443458 }, 
+     { lat: 39.89932674703466, lng: -80.18474261889916 }, 
+     { lat: 39.89918383988418, lng: -80.18474185858288 }, 
+     { lat:39.89918675635962, lng: -80.18516611506715 }, 
+    { lat: 39.89932966350404 , lng: -80.18516459443458}
+  ];
+const pollockpolygon = new google.maps.Polygon({
+        paths: pollockCoords,
+        strokeColor: "#000000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#c16c18",
+        fillOpacity: 1.0,
+        });
+pollockpolygon.setMap(map);
 
     const library = new google.maps.Marker({
     position: { lat: 39.89985167325873, lng: -80.18532419663134 },
     map,
     title: "Eberly Library!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/EUz7QPt.png",   
   });
  const libraryInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "Hours: <br> Monday-Thursday: 7:30 a.m.-12 a.m. <br> Friday: 10 a.m.-6 p.m. <br> Saturday: 10 a.m.-4 p.m. <br> Sunday: 1:30 p.m.-12 a.m.",
   });
       library.addListener("click", () => {
     libraryInfoWindow.open({
@@ -548,10 +564,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.89950758736811, lng: -80.1842338272139 },
     map,
     title: "Thayer Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/lihhdM0.png",   
   });
  const thayerpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "One of two male underclassmen dorms. Thayer looks unique because of its green bricks.",
   });
       thayerpop.addListener("click", () => {
     thayerpopInfoWindow.open({
@@ -567,10 +583,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.90038044722429, lng: -80.18551352519899 },
     map,
     title: "East Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/lihhdM0.png",   
   });
  const eastpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "One of four (SWEP) female suite style dorms. East is apart of the three suites bunched together and is located closest to Eberly Library.",
   });
       eastpop.addListener("click", () => {
     eastpopInfoWindow.open({
@@ -586,10 +602,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.90028913290763, lng: -80.18593182649265 },
     map,
     title: "South Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/lihhdM0.png",   
   });
  const southpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "One of four (SWEP) female suite style dorms. South is apart of the three suites bunched together and is located in between East and West.",
   });
       southpop.addListener("click", () => {
     southpopInfoWindow.open({
@@ -605,10 +621,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.90038218654523, lng: -80.18631952035159 },
     map,
     title: "West Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/lihhdM0.png",   
   });
  const westpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "One of four (SWEP) female suite style dorms. West is apart of the three suites bunched together and is closest to Roberts Chapel.",
   });
       westpop.addListener("click", () => {
     westpopInfoWindow.open({
@@ -627,7 +643,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const stoverpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The Beehive and market are two of the most popular places to get food, and are both in Stover. The mailroom, security office, Center for Student Services, and more are located here.",
   });
       stoverpop.addListener("click", () => {
     stoverpopInfoWindow.open({
@@ -643,10 +659,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.900720380877615, lng: -80.18718111056042 },
     map,
     title: "Roberts Chapel!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/L8j6nNd.png",   
   });
  const chapelpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The place for worship and prayer. Chapel is every Tuesday at 11 a.m. while no classes are taking place.",
   });
       chapelpop.addListener("click", () => {
     chapelpopInfoWindow.open({
@@ -661,11 +677,11 @@ const cafePolygon = new google.maps.Polygon({
       const cafepop = new google.maps.Marker({
     position: { lat: 39.90038382877349, lng: -80.18795059658143 },
     map,
-    title: "Benedum Dinning Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    title: "Benedum Hall!",
+    icon: "https://i.imgur.com/BhVCUtM.png",   
   });
  const cafepopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The dinning hall with a buffett style is located here. Also in the building is a pottery studio, art gallery, and practice rooms for the chorus and band.",
   });
       cafepop.addListener("click", () => {
     cafepopInfoWindow.open({
@@ -684,7 +700,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const gpacpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The GPAC has a 250-seat auditorium that showcases the drama and music programs.",
   });
       gpacpop.addListener("click", () => {
     gpacpopInfoWindow.open({
@@ -703,7 +719,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const csipopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "A house that is made for the Criminal Justice and Forensic students. There are classrooms and a room to practice laser shot.",
   });
       csipop.addListener("click", () => {
     csipopInfoWindow.open({
@@ -719,10 +735,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.89317346490144, lng: -80.1815134556858 },
     map,
     title: "John F. Wiley Stadium!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/3IgvLxw.png",   
   });
  const wileypopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "Located a few minutes off campus, Wiley Stadium is the home of the football, soccer, and lacross teams.",
   });
       wileypop.addListener("click", () => {
     wileypopInfoWindow.open({
@@ -741,7 +757,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const millerpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "Houses many administration offices including President Douglas G. Lee's office.",
   });
       millerpop.addListener("click", () => {
     millerpopInfoWindow.open({
@@ -760,7 +776,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const hannapopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The original building of Waynesburg University. Hanna has classrooms and offices for the Department of Business Administration.",
   });
       hannapop.addListener("click", () => {
     hannapopInfoWindow.open({
@@ -776,10 +792,10 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.89809693468687, lng: -80.18755103526031 },
     map,
     title: "Rudy Marisa Fieldhouse!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/bEifgTq.png",   
   });
  const rudypopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "Named after legendary former Waynesburg head men's basketball coach Rudy Marisa, the gymnasium is located here. Basketball games, wrestling matches, and volleyball matches would all be here.",
   });
       rudypop.addListener("click", () => {
     rudypopInfoWindow.open({
@@ -794,11 +810,11 @@ const cafePolygon = new google.maps.Polygon({
        const stewpop = new google.maps.Marker({
     position: { lat: 39.89795401330608, lng: -80.1866221064007 },
     map,
-    title: "Stewart Science Center!",
+    title: "Stewart Science Building!",
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const stewpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "This five-story building houses the nursing, chemistry, biology, computer science, and mathematics departments. Classrooms and labratories are included here.",
   });
       stewpop.addListener("click", () => {
     stewpopInfoWindow.open({
@@ -817,7 +833,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const credpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The Center for Research and Economic Development (CRED) is associated with activities that stimulate the economy.",
   });
       credpop.addListener("click", () => {
     credpopInfoWindow.open({
@@ -836,7 +852,7 @@ const cafePolygon = new google.maps.Polygon({
     icon: "https://i.imgur.com/i0ftGjT.png",   
   });
  const nestpopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The new location for the campus store with plenty of options for clothing and other items. Upstairs is Rudy's place, which has games and furniture making it a good place to unwind.",
   });
       nestpop.addListener("click", () => {
     nestpopInfoWindow.open({
@@ -852,14 +868,33 @@ const cafePolygon = new google.maps.Polygon({
     position: { lat: 39.89730404454635, lng: -80.18630226633626 },
     map,
     title: "Willison Hall!",
-    icon: "https://i.imgur.com/i0ftGjT.png",   
+    icon: "https://i.imgur.com/lihhdM0.png",   
   });
  const willipopInfoWindow = new google.maps.InfoWindow({
-    content: "Waynesburg",
+    content: "The only men's suite style dorm. The building is six stories, completed with a lounge that has a pool table, a ping pong table, a foosball table, and a large TV.",
   });
       willipop.addListener("click", () => {
     willipopInfoWindow.open({
       anchor: willipop,
+      map,
+      shouldFocus: false,
+
+
+});
+
+});
+      const pollockpop = new google.maps.Marker({
+    position: { lat: 39.89925474978835, lng: -80.18494203520387 },
+    map,
+    title: "Pollock Hall!",
+    icon: "https://i.imgur.com/lihhdM0.png",   
+  });
+ const pollockpopInfoWindow = new google.maps.InfoWindow({
+    content: "One of four (SWEP) female suite style dorms. Pollock is the only suite style dorm not next to the others. It is located between Buhl and Thayer.",
+  });
+      pollockpop.addListener("click", () => {
+    pollockpopInfoWindow.open({
+      anchor: pollockpop,
       map,
       shouldFocus: false,
 
